@@ -1,0 +1,89 @@
+<div class="home-projects__intro-container">
+    <h2 class="home-projects__title">Projects</h2>
+    <p class="home-projects__content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+</div>
+
+<div class="home-projects__projects-container home-projects__projects-container--web">
+    <div class="home-projects__img-container">
+        <img width="518" height="347" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/web/kingdom-tower.png")?>" alt="kingdom-tower">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Kingdom Tower</h3>
+            <p class="home-projects__img-bottom-content">Marble Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="518" height="347" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/web/dubai-mall.png")?>" alt="dubai-mall">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Dubai Mall</h3>
+            <p class="home-projects__img-bottom-content">Wood Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="518" height="347" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/web/king-road-offices.png")?>" alt="king-road-offices">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">King Road Offices</h3>
+            <p class="home-projects__img-bottom-content">Outdoor Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="518" height="347" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/web/beach-tower-alupang.png")?>" alt="beach-tower-alupang">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Beach Tower Alupang</h3>
+            <p class="home-projects__img-bottom-content">Wood Flooring</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="home-projects__projects-container home-projects__projects-container--mobile">
+    <div class="home-projects__img-container">
+        <img width="388" height="350" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/mobile/dubai-mall.png")?>" alt="Dubai mall">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Dubai mall</h3>
+            <p class="home-projects__img-bottom-content">Wood Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="388" height="350" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/mobile/kingdom-tower.png")?>" alt="kingdom-tower">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Kingdom Tower</h3>
+            <p class="home-projects__img-bottom-content">Marble Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="388" height="350" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/mobile/king-road-offices.png")?>" alt="king-road-offices">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">King Road Offices</h3>
+            <p class="home-projects__img-bottom-content">Outdoor Flooring</p>
+        </div>
+    </div>
+    <div class="home-projects__img-container">
+        <img width="388" height="350" class="home-projects__img"  src="<?php echo $block->getViewFileUrl("images/home-projects/mobile/beach-tower-alupang.png")?>" alt="beach-tower-alupang">
+        <div class="home-projects__img-bottom-container">
+            <h3 class="home-projects__img-bottom-title">Beach Tower Alupang</h3>
+            <p class="home-projects__img-bottom-content">Wood Flooring</p>
+        </div>
+    </div>
+</div>
+
+
+<button type="button" class="home-projects__btn home-projects__btn--primary">
+        View All
+</button>
+
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        "slick", "domReady!"], function ($) {
+            "use strict";
+
+          $(".home-projects__projects-container--mobile").slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 1,
+          })
+            
+    });
+</script>

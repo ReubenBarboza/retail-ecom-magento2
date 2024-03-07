@@ -1,0 +1,28 @@
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="product.info.details.after.wrapper.main">
+            <container name="practicePdpTabContainer" htmlClass="practicePdpTabContainer" htmlTag="div">
+                <block name="practice_pdp_tabs" template="Magento_Catalog::practice_pdp_tabs.phtml"/>
+            </container>
+            <container name="practicePdpRelatedProductsContainer" htmlClass="practicePdpRelatedProductsContainer" htmlTag="div">
+                <block name="practice_pdp_related-products" template="Magento_Catalog::practice_pdp_related-products.phtml"/>
+            </container>
+             <container name="practicePdpRecentlyViewedProductsContainer" htmlClass="practicePdpRecentlyViewedProductsContainer" htmlTag="div">
+                <block name="practice_pdp_viewed-products" template="Magento_Catalog::practice_pdp_viewed-products.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.overview" destination="product.info.main" before="product.info"/>
+        <move element="view.addto.wishlist" destination="product.info.addtocart" after="-"/>
+        <move element="product.review.form" destination="practice_pdp_tabs"/>
+
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="product.info.review" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true"/>
+        <!-- <referenceBlock name="reviews.tab" remove="true"/> -->
+        
+       
+    </body>
+</page>

@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- header -->
+        <referenceContainer name="header.panel.wrapper">
+            <container name="practiceRightNav" htmlTag="ul" htmlClass="practiceRightNav">
+
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="header.container">
+            <container name="practiceMainNav" htmlTag="div" htmlClass="practiceMainNav">
+            </container>
+        </referenceContainer>
+
+        <referenceBlock name="my-account-link">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true"></argument>
+                <argument name="class" xsi:type="string">account-link</argument>
+            </arguments>
+        </referenceBlock>
+
+        <move element="header.panel.wrapper" destination="practiceMainNav"/>
+        <move element="navigation.sections" destination="practiceMainNav" before="header.panel.wrapper"/>
+        <move element="top.search" destination="practiceMainNav" before="-"/>
+
+        <move element="minicart" destination="practiceRightNav" before="-"/>
+        <move element="my-account-link" destination="practiceRightNav"/>
+        <move element="wish-list-link" destination="practiceRightNav" after="minicart"/>
+
+    
+        <!-- <referenceBlock name="authorization-link" remove="true"/> -->
+        <!-- <referenceBlock name="register-link" remove="true"/> -->
+        <!-- header end -->
+
+        <!-- footer -->
+
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="practiceFooter" template="Magento_Theme::html/practice_footer.phtml"></block>
+        </referenceContainer>
+
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name='report.bugs' remove='true'/>
+        <referenceBlock name="copyright" remove="true"/>
+        <!-- footer end -->
+    </body>
+
+</page>    

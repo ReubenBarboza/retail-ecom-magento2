@@ -1,0 +1,105 @@
+<div class="footer__logo-container">
+    <img width="162" height="57" class="footer__img footer__img--web"  src="<?php echo $block->getViewFileUrl("images/logo.png")?>" alt="logo">
+    <img width="122" height="43" class="footer__img footer__img--mobile" src="<?php echo $block->getViewFileUrl("images/logo-mobile.png")?>" alt="logo">
+</div>
+
+<div class="footer__products">
+        <div class="footerCollapsible" data-role="collapsible">
+            <p class="footer__list-title" data-role="trigger">
+                <span>Products</span>
+                <span class="footer__caret"></span>
+            </p>
+        </div>
+        <ul class="footer__list" data-role="content">
+            <li class="footer__list-item">Sand Stone</li>
+            <li class="footer__list-item">Stone</li>
+            <li class="footer__list-item">Cement</li>
+            <li class="footer__list-item">Soft Stone</li>
+        </ul>
+</div>
+
+<div class="footer__services ">   
+    <div class="footerCollapsible" data-role="collapsible">
+        <p class="footer__list-title" data-role="trigger">
+            <span>Services</span>
+            <span class="footer__caret"></span>
+        </p>
+    </div>
+    <ul class="footer__list" data-role="content">
+        <li class="footer__list-item">Measurement Service</li>
+        <li class="footer__list-item">Product Advice</li>
+        <li class="footer__list-item">Interior Design</li>
+    </ul>
+</div>
+
+<div class="footer__contact">   
+    <div class="footerCollapsible" data-role="collapsible">
+        <p class="footer__list-title" data-role="trigger">
+            <span>Contact Information</span>
+            <span class="footer__caret"></span>
+        </p>
+    </div>
+    <p class="footer__contact-content" data-role="content">
+        3181 Al Imam Saud Ibn Abdul Aziz Branch Rd, <br>
+        An Nuzhah, Riyadh 12474, <br>
+        Saudi Arabia
+    </p>
+</div>
+
+<div class="footer__container">
+    <div class="footer__social">
+        <a href="https://facebook.com" target="_blank"  class="footer__fb"></a>
+        <a href="https://twitter.com"  target="_blank" class="footer__twitter"></a>
+        <a href="https://instagram.com" target="_blank"  class="footer__insta"></a>
+    </div>
+
+    <div class="footer__copyright">
+        Copyright © 2022 | All Rights Reserved.
+    </div>
+</div>
+
+
+<div class="footer__credit">
+    Created with love by <span class="name">thecreation.design</span>
+</div>
+
+
+
+<script>
+    require([
+        'jquery',
+        "underscore",
+        'collapsible', "domReady!"], function ($, _) {
+            "use strict";
+
+            let elseBlock=false;
+            function collapsibleForMobile() {
+                // can initialize with options only once, hence the elseBlock logic
+                if ($(window).width() < 768) {
+                    $(".footerCollapsible").collapsible({animate:{duration:500, easing:"swing"}, openedState:"active"});
+                    if(elseBlock) {
+                        $(".footerCollapsible").collapsible("enable");
+                    }
+                    $(".footerCollapsible").collapsible("forceDeactivate");
+                    
+                }   else {
+                    elseBlock=true;
+                    $(".footerCollapsible").collapsible({animate:{duration:500, easing:"swing"}, openedState:"active"});
+                    $(".footerCollapsible").collapsible("disable");
+                    $(".footer.content [data-role=content]").each((_,item)=>{
+                        $(item).show();
+                    })
+
+                }
+            }
+           
+            collapsibleForMobile()
+
+            
+                $(window).on("resize",
+                _.debounce(collapsibleForMobile, 300)
+                );
+          
+            
+    });
+</script>

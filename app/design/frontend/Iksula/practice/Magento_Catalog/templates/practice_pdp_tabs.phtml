@@ -1,0 +1,28 @@
+<div class="pdp-tabs__root"
+     data-mage-init='{"mage/tabs": {"openedState": "active", "animate": {"duration": 100}, "active": 1}}'>
+    <div class="pdp-tabs__title-container">
+        <div class="pdp-tabs__title" data-role="collapsible">
+            <a class="pdp-tabs__switch" data-toggle="trigger" href="#description">
+                <h2>Description</h2>
+            </a>
+        </div>
+
+        <div class="pdp-tabs__title" data-role="collapsible">
+            <a class="pdp-tabs__switch" data-toggle="trigger" href="#details">
+                <h2>Details</h2>
+            </a>
+        </div>
+
+        <div class="pdp-tabs__title" data-role="collapsible">
+            <a class="pdp-tabs__switch" data-toggle="trigger" href="#reviews">
+                <h2>Reviews</h2>
+            </a>
+        </div>
+    </div>
+
+    <div id="description" class="pdp-tabs__content" data-role="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare euismod arcu, ac laoreet metus pulvinar feugiat. Praesent in feugiat ante, a dictum nunc. Pellentesque convallis tortor quis purus finibus aliquet. In hac habitasse platea dictumst. Proin vestibulum ante ac faucibus tristique. Integer quis efficitur dolor, at dignissim dolor.</div>
+    <div id="details" class="pdp-tabs__content" data-role="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sit qui praesentium? Aut odit magnam excepturi officia praesentium a suscipit.</div>
+    <div id="reviews" class="pdp-tabs__content" data-role="content">
+        <?=$block->getChildHtml('review_form')?>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="practiceHomeHeroContainer" htmlClass="practiceHomeHeroContainer" htmlTag="div">
+                <block name="practiceHomeHero" template="Magento_Theme::html/practice_home_hero.phtml"></block>
+            </container>
+            <container name="practiceHomeProductsContainer" htmlClass="practiceHomeProductsContainer" htmlTag="div">
+                <block name="practiceHomeProducts" template="Magento_Theme::html/practice_home_products.phtml"></block>
+            </container>
+            <container name="practiceHomeVisionContainer" htmlClass="practiceHomeVisionContainer" htmlTag="div">
+                <block name="practiceHomeVision" template="Magento_Theme::html/practice_home_vision.phtml"></block>
+            </container>
+            <container name="practiceHomeCreativeContainer" htmlClass="practiceHomeCreativeContainer" htmlTag="div">
+                <block name="practiceHomeCreative" template="Magento_Theme::html/practice_home_creative.phtml"></block>
+            </container>
+            <container name="practiceHomeProjectsContainer" htmlClass="practiceHomeProjectsContainer" htmlTag="div">
+                <block name="practiceHomeProjects" template="Magento_Theme::html/practice_home_projects.phtml"></block>
+            </container>
+            <container name="practiceTilesContainer" htmlClass="practiceTilesContainer" htmlTag="div">
+                <block name="practiceTiles" template="Magento_Theme::html/practice_home_tiles.phtml"></block>
+            </container>
+            <container name="practiceShowroomContainer" htmlClass="practiceShowroomContainer" htmlTag="div">
+                <block name="practiceShowroom" template="Magento_Theme::html/practice_home_showroom.phtml"></block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

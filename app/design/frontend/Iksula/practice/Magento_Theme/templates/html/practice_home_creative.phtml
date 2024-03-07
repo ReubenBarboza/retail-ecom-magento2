@@ -1,0 +1,72 @@
+<div class="home-creative__creative-container home-creative__creative-container--web">
+    <div class="home-creative__intro-container">
+        <h2 class="home-creative__title">Creative Solutions by Professional Designers</h2>
+        <p class="home-creative__content">Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquet at. Magna nam platea justo.
+        </p>
+    </div>
+
+    <div class="home-creative__img-container">
+        <img width="257" height="325" class="home-creative__img home-creative__img--web"  src="<?php echo $block->getViewFileUrl("images/home-creative/web/creative1.png")?>" alt="creative1">
+        <button type="button" class="home-creative__btn home-creative__btn--primary">
+            Read More
+        </button>
+    </div>
+
+    <div class="home-creative__img-container">
+        <img width="257" height="325" class="home-creative__img home-creative__img--web"  src="<?php echo $block->getViewFileUrl("images/home-creative/web/creative2.png")?>" alt="creative2">
+    </div>
+
+    <div class="home-creative__img-container">
+        <img width="257" height="325" class="home-creative__img home-creative__img--web"  src="<?php echo $block->getViewFileUrl("images/home-creative/web/creative3.png")?>" alt="creative3">
+    </div>
+
+    <div class="home-creative__img-container">
+        <img width="454" height="726" class="home-creative__img home-creative__img--web"  src="<?php echo $block->getViewFileUrl("images/home-creative/web/creative-video-img.png")?>" alt="creative-video-img">
+        <div class="home-creative__img-bottom-container">
+            <img class="home-creative__img" width="60" height="60" src="<?php echo $block->getViewFileUrl("images/home-creative/web/play-img.png")?>" alt="play">
+            <div class="home-creative__watch-container">
+                <p>Watch</p>
+                <p>Video Tour</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="home-creative__creative-container home-creative__creative-container--mobile">
+    <div class="home-creative__intro-container">
+        <h2 class="home-creative__title">Creative Solutions by Professional Designers</h2>
+        <p class="home-creative__content">Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquet at. Magna nam platea justo.
+        </p>
+    </div>
+    <div class="home-creative__carousel-root">
+        <div class="home-creative__img-container">
+            <img width="388" height="325" class="home-creative__img"  src="<?php echo $block->getViewFileUrl("images/home-creative/mobile/creative1.png")?>" alt="creative1">
+        </div>
+        <div class="home-creative__img-container">
+            <img width="338" height="325" class="home-creative__img"  src="<?php echo $block->getViewFileUrl("images/home-creative/mobile/creative2.png")?>" alt="creative2">
+        </div>
+        <div class="home-creative__img-container">
+            <img width="338" height="325" class="home-creative__img"  src="<?php echo $block->getViewFileUrl("images/home-creative/mobile/creative3.png")?>" alt="creative3">
+        </div>
+        <div class="home-creative__img-container">
+            <img width="338" height="325" class="home-creative__img"  src="<?php echo $block->getViewFileUrl("images/home-creative/mobile/creative-video-img.png")?>" alt="creative video img">
+        </div>
+    </div>
+</div>
+
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        "slick", "domReady!"], function ($) {
+            "use strict";
+
+          $(".home-creative__carousel-root").slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 1,
+          })
+            
+    });
+</script>

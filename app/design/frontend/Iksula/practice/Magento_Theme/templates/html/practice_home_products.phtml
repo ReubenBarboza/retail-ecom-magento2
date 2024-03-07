@@ -1,0 +1,84 @@
+<div class="home-products__intro-container">
+    <h2 class="home-products__title">Products</h2>
+    <p class="home-products__content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+</div>
+
+<div class="home-products__products-container home-products__products-container--mobile">
+    <div class="home-products__img-container">
+        <img width="387" height="350" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/mobile/bathroom-tiles.png")?>" alt="bathroom-tiles">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Bathroom Tiles</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="387" height="350" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/mobile/marble.png")?>" alt="marble">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Marble</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="387" height="350" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/mobile/outdoor-flooring.png")?>" alt="outdoor-flooring">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Outdoor Flooring</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="387" height="350" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/mobile/kitchen-interior.png")?>" alt="kitchen-interior">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Kitchen Interior</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+</div>
+
+<div class="home-products__products-container home-products__products-container--web">
+    <div class="home-products__img-container">
+        <img width="987" height="653" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/web/bathroom-tiles.png")?>" alt="bathroom-tiles">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Bathroom Tiles</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="339" height="638" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/web/marble.png")?>" alt="marble">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Marble</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="454" height="294" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/web/outdoor-flooring.png")?>" alt="outdoor-flooring">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Outdoor Flooring</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+    <div class="home-products__img-container">
+        <img width="454" height="294" class="home-products__img"  src="<?php echo $block->getViewFileUrl("images/home-products/web/kitchen-interior.png")?>" alt="kitchen-interior">
+        <div class="home-products__img-bottom-container">
+            <h3 class="home-products__img-bottom-title">Kitchen Interior</h3>
+            <p class="home-products__img-bottom-content">Ante mus blandit sapien sociosqu per consequat ad.</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    require([
+        'jquery',
+        'jquery/ui',
+        "slick", "domReady!"], function ($) {
+            "use strict";
+
+          $(".home-products__products-container--mobile").slick({
+            dots: true,
+            arrows: true,
+            infinite: false,
+            slidesToShow: 1,
+          })
+            
+    });
+</script>

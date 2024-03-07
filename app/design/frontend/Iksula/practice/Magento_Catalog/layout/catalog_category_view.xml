@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <container name="practiceCatalogHeroContainer" htmlClass="practiceCatalogHeroContainer" htmlTag="div">
+                <block name="practiceCatalogHero" template="Magento_Catalog::practice_catalog_hero.phtml"></block>
+            </container>
+             <container name="practiceCatalogCategoryListContainer" htmlClass="practiceCatalogCategoryListContainer" htmlTag="div">
+                <block name="practiceCatalogCategoryList" template="Magento_Catalog::practice_catalog_category-list.phtml"></block>
+            </container>
+             <container name="practiceCatalogTilesContainer" htmlClass="practiceCatalogTilesContainer" htmlTag="div">
+                 <block name="practiceCatalogTiles" template="Magento_Catalog::practice_catalog_tiles.phtml"></block>
+             </container>
+             <container name="practiceCatalogPromoContainer" htmlClass="practiceCatalogPromoContainer" htmlTag="div">
+                 <block name="practiceCatalogPromo" template="Magento_Catalog::practice_catalog_promo.phtml"></block>
+             </container>
+        </referenceContainer>
+        <move element="practiceCatalogTilesContainer" destination="category.products.list"/>
+        <move element="category.products.list" destination="content" after="practiceCatalogCategoryListContainer"/>
+        <referenceContainer name="sidebar.additional" remove="true"/>
+        <referenceBlock name="breadcrumbs" remove="true"/>
+    </body>
+</page>    
