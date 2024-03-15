@@ -5,6 +5,7 @@
 4)Layout
 5)Page Sections
 6)Responsive
+7)Hover
 
 */
 
@@ -265,5 +266,23 @@
         @media only screen and (max-width: @screen__m) {
             @rules();
         }
+    }
+}
+
+.media-max-width-desktop(@rules) {
+
+    & when (@media-target ='desktop'),
+    (@media-target ='all') {
+        @media only screen and (max-width: @screen__l) {
+            @rules();
+        }
+    }
+}
+
+// Hover
+
+.onhover-active-focus(@rules){
+    &:hover, &:active, &:focus {
+        @rules();
     }
 }

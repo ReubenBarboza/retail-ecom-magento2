@@ -43,12 +43,9 @@
             margin-bottom: 31px;
             text-transform: uppercase;
 
-            & when (@media-target ='mobile'),
-                (@media-target ='all') {
-                    @media only screen and (max-width: @screen__m) {
-                        font-size: 3rem;
-                }
-            }
+            .media-max-width-mobile({
+                font-size: 3rem;
+            });
         }
 
         &__content {
@@ -148,12 +145,10 @@
         justify-content: space-between;
         align-items: center;
 
-        & when (@media-target ='mobile'),
-        (@media-target ='all') {
-            @media only screen and (max-width: @screen__m) {
-                justify-content: center;
-            }
-        }
+        .media-max-width-mobile({
+            justify-content: center;
+            gap: 1rem;
+        });
 
         &::before, &::after {
             content: none;

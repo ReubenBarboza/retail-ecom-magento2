@@ -19,19 +19,14 @@ define(["jquery", "underscore", "domReady!"], function ($, _) {
 
     arrangeElementsForMobile();
 
-
     // mobile
 
     $(window).on("resize", _.throttle(arrangeElementsForMobile, 100));
 
-    //pdp
+    //cart
 
-   
-    // setTimeout(function () {
-    //     let priceElement = $(".product-info-main .price-box .price-wrapper .price");
-    //     let updatedPrice =
-    //         priceElement.text().substring(1).replace(".", ",") + " SAR";    
-    //     priceElement.text(updatedPrice);
-    // }, 700);
-
+    //remove SAR
+    $(".cart-price .price").each((_, price) => {
+        return $(price).text($(price).text().slice(3));
+    });
 });

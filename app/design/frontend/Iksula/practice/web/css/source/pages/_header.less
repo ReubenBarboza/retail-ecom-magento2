@@ -45,6 +45,41 @@
     }
 }
 
+.nav-open {
+    .navigation .level0.active>a:not(.ui-state-active) span:not(.ui-menu-icon) {
+        margin: 0px;
+    }
+
+    .nav-sections .navigation .level0.active > .level-top {
+        color: #979797; 
+    }
+
+    .nav-sections .navigation .level0>.level-top {
+        color: @primary-dark;
+
+        .onhover-active-focus({
+            color: #979797; 
+        }) 
+    }
+
+    .nav-sections-item-switch {
+        color: @primary-dark;
+        .onhover-active-focus({
+            color: #979797; 
+        }) 
+    }
+
+    .nav-sections .header.links a, .nav-sections .header.links a {
+        .onhover-active-focus({
+            color: #979797; 
+        }) 
+    }
+
+    .nav-sections .header.links li.greet.welcome {
+        display: none;
+    }
+}
+
 .panel.header {
     display: none;
 }
