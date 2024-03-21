@@ -257,6 +257,27 @@
     }
 }
 
+.make-subtitle(){
+    &__link {
+        font-size: 20px;
+        color: #111010;
+        line-height: 28px;
+        text-decoration: none;
+        font-weight: 400;
+        .onhover-active-focus({
+            color: #A1A1A1;
+        });
+    }
+
+    &__arrow {
+        &::before {
+        .icomoon-font-icon(@icon-left-arrow-big);
+        margin-right: 8px;
+
+        }
+    }
+}
+
 // Responsive
 
 .media-max-width-mobile(@rules) {
