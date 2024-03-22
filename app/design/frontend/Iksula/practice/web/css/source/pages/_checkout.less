@@ -1,79 +1,104 @@
-// .checkout-index-index {
-//     .checkout-shipping-method {
-//         display: none;
-//     }
-//     .opc {
-//         display: flex;
-//         gap: 1rem;
-//     }
+.checkout-index-index {
+    .nav-sections {
+        display:block;
+    }
 
-//     .checkout-shipping-address {
-//         .step-title {
-//             display: none;
-//         }
-//     }
+    .checkout-shipping-method {
+        display: none;
+    }
+    .opc {
+        display: flex;
+        gap: 1rem;
+    }
 
-//     .page-main {
-//         padding-inline:@main-x-spacing;
-//         max-width: @max-width;
-//         margin-inline: auto;
-//     }
+    .checkout-shipping-address {
+        max-width: 50%;
+        .step-title {
+            display: none;
+        }
+    }
 
-//     .page-title-wrapper {
-//         position: static;
-//         font-weight: 700;
-//         font-size: 35px;
-//         line-height: 35px;
-//         color: #111010;
-//         width: auto;
-//         height: auto;
-//         margin-top: 41px;
-//         margin-bottom: 35px
-//     }
+    .page-main {
+        padding-inline:@main-x-spacing;
+        max-width: @max-width;
+        margin-inline: auto;
+    }
 
-//     .authentication-wrapper {
-//         display: none;
-//     }
+    .page-title-wrapper {
+        position: static;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 35px;
+        color: #111010;
+        width: auto;
+        height: auto;
+        margin-top: 41px;
+        margin-bottom: 35px
+    }
 
-//     .payment-method-form-wrapper {
-//         .control {
-//             display: flex;
-//             justify-content: space-between;
-//             align-items: center;
-//             margin-bottom:10px;
-//             padding: 24px; 
-//         }
-//     }
+    .authentication-wrapper {
+        display: none;
+    }
 
-//     .checkout {
-//         .make-subtitle();
+    .checkout-payment-method  {
+        width: 50%;
+        .step-title{
+            display: none;
+        }
+    }
 
-//         &__mistermiss {
-//             .checkout__btn{
-//                .btn();
-//                .btn--secondary();
-//                 padding: 13px 20px 14px 21px;
-//                 border: 1px solid black;
+    .payment-method-form-wrapper {
+        .control-paypal, .control-paypalplus, .control-investmentbank {
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            // margin-bottom:10px;
+            // padding: 24px; 
+
+            .make-box-radio();
+
+            & > label {
+                display: flex;
+                justify-content: space-between;
+                padding: 24px; 
+                margin-bottom:10px;
+            }
+        }
+    }
+
+    #checkout-step-shipping label {
+        // .screen-reader-text();
+    }
+
+    .checkout {
+        .make-subtitle();
+
+        &__mistermiss {
+            .checkout__btn{
+               .btn();
+               .btn--secondary();
+                padding: 13px 20px 14px 21px;
+                border: 1px solid black;
 
 
-//                 .onhover-active-focus({
-//                     .btn--secondary--hover();
-//                 });
+                .onhover-active-focus({
+                    .btn--secondary--hover();
+                });
 
-//                 &--active {
-//                     .btn();
-//                     .btn--primary();
-//                     padding: 13px 20px 14px 21px;
-//                     border: 1px solid black;
+                &--active {
+                    .btn();
+                    .btn--primary();
+                    padding: 13px 20px 14px 21px;
+                    border: 1px solid black;
                     
-//                     .onhover-active-focus({
-//                         .btn--primary--hover();
-//                     });
+                    .onhover-active-focus({
+                        .btn--primary--hover();
+                    });
 
-//                 }
-//             }
-//         }
-//     }
+                }
+            }
+        }
+    }
 
 
-// }
+}

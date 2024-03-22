@@ -202,7 +202,6 @@
          * @returns {String}
          */
         isPaymentMethodsAvailable: function () {
-            console.log(this.paymentGroupsList())
             return _.some(this.paymentGroupsList(), function (group) {
                 return this.regionHasElements(group.displayArea);
             }, this);

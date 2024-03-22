@@ -92,6 +92,4 @@
             }
         }
     });
-        console.log("🚀 ~ address:", address)
-        console.log("🚀 ~ address:", address)
 });

@@ -1,18 +1,38 @@
 <ul>
     <li class="payment-method-form-wrapper">
-        <form submit="#">
+       
+        <div class="control control-paypal">
+            <label for="paypal">Paypal
+                <input type="radio" value="paypal" name="payment" id="paypal" data-bind="checked: currentChecked"/>
+                <span></span>
+            </label>
+        </div>
+        <div class="control control-paypalplus">
+            <label for="paypalplus">Paypal Plus
+                <input type="radio" value="paypalplus" name="payment" id="paypalplus" data-bind="checked: currentChecked"/>
+                <span></span>
+            </label>
+           
+        </div>
+        <div class="control control-investmentbank">
+            <label for="investmentbank">Investment Bank
+                <input type="radio" value="investmentbank" name="payment" id="investmentbank" data-bind="checked: currentChecked"/>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="bank-content" data-bind="visible: currentChecked() === 'investmentbank'">
             <div class="control">
-                <label for="paypal">Paypal</label>
-                <input type="radio" name="payment" id="paypal"/>
+                 <input type="text" placeholder="Credit card number*"/>
             </div>
             <div class="control">
-                <label for="paypalplus">Paypal Plus</label>
-                <input type="radio" name="payment" id="paypalplus"/>
+                 <input type="text" onfocus="(this.type='date')"
+                 onblur="(this.type='text')" placeholder="Expiry Date*">
+                 <input type="text" placeholder="CVC / CVV*">
             </div>
             <div class="control">
-                <label for="investmentbank">Investment Bank</label>
-                <input type="radio" name="payment" id="investmentbank"/>
+                 <input type="text" placeholder="Name of Cardholder*">
             </div>
-        </form>
-</li>
+         </div>
+    </li>
 </ul>  

@@ -1,22 +1,22 @@
 define(
     [
+        'ko',
         'Magento_Checkout/js/view/payment/default'
     ],
-    function (Component) {
+    function (ko,Component) {
         'use strict';
         return Component.extend({
             defaults: {
                 template: 'Magento_Checkout/payment/paypal'
             },
+            currentChecked:ko.observable(false),
+            getCode:function(){
+                return 'paypal'
+            },
+            getTitle(){
+                return 'Paypal'
+            },
 
-            getCode: function(){
-                return "paypal"
-           }
-           ,
-
-           getTitle: function(){
-            return "Paypal"
-       }
         });
     }
 );
