@@ -40,34 +40,273 @@
         display: none;
     }
 
-    .checkout-payment-method  {
+    .opc .checkout-payment-method  {
         width: 50%;
+        margin-inline: auto;
         .step-title{
             display: none;
         }
     }
 
     .payment-method-form-wrapper {
+        @padding:24px;
         .control-paypal, .control-paypalplus, .control-investmentbank {
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: center;
-            // margin-bottom:10px;
-            // padding: 24px; 
 
             .make-box-radio();
 
             & > label {
                 display: flex;
                 justify-content: space-between;
-                padding: 24px; 
+                align-items: center;
+                padding: @padding; 
                 margin-bottom:10px;
+            }
+        }
+
+        .payment-text {
+            margin-right: auto;
+            margin-left:15px;
+        }
+
+        img {
+            border: 1px solid black;
+        }
+
+        .control-investmentbank {
+            img {
+                border: none;
+            }
+        }
+
+        .bank-content {
+            padding: @padding;
+            padding-top:0px;
+            .control {
+                margin: 0 0 20px;
+                width: 350px;
+                
+                input {
+                    width:100%;
+                    height: auto;
+                    border: 1px solid #82828266;
+                    padding: 10px 18px;
+
+                    &::placeholder {
+                        color:#828282D9;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 18.27px;
+                    }
+                }
+
+                .date {
+                    display: inline-block;
+                    width: 40%;
+                }
+
+                .cvc {
+                    display: inline-block;
+                    width: 54.5%;
+                    margin-left: 15px;
+                }
             }
         }
     }
 
-    #checkout-step-shipping label {
-        // .screen-reader-text();
+    #checkout-step-shipping .label {
+        .screen-reader-text();
+    }
+
+    #shipping-new-address-form {
+        max-width:350px;
+
+        div[name="shippingAddress.company"] {
+            display: none;
+        }
+        div[name="shippingAddress.region_id"] {
+            display: none;
+        }
+
+        div[name="shippingAddress.street.0"] {
+            display: inline-block;
+            width: 60%;
+        }
+
+        div[name="shippingAddress.street.1"] {
+            display: inline-block;
+            max-width: ~"calc(40% - 9px)";
+            margin-top: 0px;
+            margin-left: 5px;
+        }
+
+        div[name="shippingAddress.postcode"] {
+            display: inline-block;
+            width: 40%;
+        }
+
+        div[name="shippingAddress.city"] {
+            display: inline-block;
+            width: ~"calc(60% - 9px)";
+            margin-top: 0px;
+            margin-left: 9px;
+        }
+
+        div[name="shippingAddress.telephone"] {
+            .control::after {
+                content:"*Required field";
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14.52px;
+                color: #828282D9;
+                display:block;
+                margin-top:5px;
+            }
+        }
+    }
+
+    .field-tooltip .field-tooltip-action {
+        display: none;
+    }
+
+    .fieldset > .field {
+        margin: 0 0 20px;
+        width: 100%;
+
+        input[type='email'] {
+            width: 100%;
+        }
+        
+        .note {
+            display: none !important;
+        }
+    }
+
+    .fieldset:last-child {
+        margin-bottom: 0px;
+    }
+
+    .fieldset > .field:not(.choice) > .control {
+        width:100%;
+        position: relative;
+        input {
+            width:100%;
+            height: auto;
+            border: 1px solid #82828266;
+            padding: 10px 18px;
+
+            &::placeholder {
+                color:#828282D9;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 18.27px;
+            }
+        }
+
+        select {
+            height: auto;
+            border: 1px solid #82828266;
+            padding: 10px 18px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .chevron-down {
+            &::before {
+                .icomoon-font-icon(@icon-chevron-down-solid);
+                position: absolute;
+                right: 24px;
+                top: 10px;
+                color:#808080;
+                pointer-events: none;
+            }
+        }
+    }
+    .opc-wrapper .form-login {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .belowShippingFormWrapper {
+        width: 350px;
+        .create-account {
+            .input-label-container {
+                display: flex;
+                align-items: start;
+                gap: 12px;
+                margin-bottom: 19px;
+            }
+
+            label {
+                color: #000000;
+                font-weight: 400;
+                font-size: 15px;
+                max-width: 30ch;
+            }
+
+            p  {
+                .flex-center();
+                justify-content: start;
+                margin-bottom: 25px;
+                margin-left: 28px;
+                gap: 5px;
+
+                & > span {
+                    font-weight: 400;
+                    font-size: 10px;
+                    color: #828282;
+                    line-height: 10px;
+                }
+            }
+        }
+
+        .shipping-different {
+            margin-bottom: 17px;
+        }
+
+        .field:not(.create-account,.shipping-different) {
+            margin: 0 0 20px;
+            width: 100%;
+
+            input {
+                width:100%;
+                height: auto;
+                border: 1px solid #82828266;
+                padding: 10px 18px;
+    
+                &::placeholder {
+                    color:#828282D9;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 18.27px;
+                }
+            }
+        }
+
+        .control .field{
+            display: inline-block;
+        }
+
+        .control {
+            .second-post {
+                max-width: ~"calc(40% - 13px)";
+            }
+
+           .second-location {
+                max-width: 60%;
+                margin-left: 9px;
+            }
+        
+            .second-street {
+                max-width: ~"calc(60% - 13px)";
+                
+            }
+
+            .second-houses {
+                max-width: 40%;
+                margin-left: 9px;
+
+            }
+        }
     }
 
     .checkout {

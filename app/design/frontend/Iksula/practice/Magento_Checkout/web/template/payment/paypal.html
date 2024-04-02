@@ -2,22 +2,33 @@
     <li class="payment-method-form-wrapper">
        
         <div class="control control-paypal">
-            <label for="paypal">Paypal
+            <label for="paypal">
+                <img data-bind="attr: { src: require.toUrl('images/checkout/paypal.png') }" />
+                <span class="payment-text">
+                    Paypal
+                </span>
                 <input type="radio" value="paypal" name="payment" id="paypal" data-bind="checked: currentChecked"/>
-                <span></span>
+                <span class="box-deco"></span>
             </label>
         </div>
         <div class="control control-paypalplus">
-            <label for="paypalplus">Paypal Plus
+            <label for="paypalplus">
+                <img data-bind="attr: { src: require.toUrl('images/checkout/paypal.png') }" />
+                <span class="payment-text">
+                    Paypal Plus
+                </span>
                 <input type="radio" value="paypalplus" name="payment" id="paypalplus" data-bind="checked: currentChecked"/>
-                <span></span>
+                <span class="box-deco"></span>
             </label>
-           
         </div>
         <div class="control control-investmentbank">
-            <label for="investmentbank">Investment Bank
+            <label for="investmentbank">
+                <img data-bind="attr: { src: require.toUrl('images/checkout/investment-bank.png') }" />
+                <span class="payment-text">
+                    Investment Bank
+                </span>
                 <input type="radio" value="investmentbank" name="payment" id="investmentbank" data-bind="checked: currentChecked"/>
-                <span></span>
+                <span class="box-deco"></span>
             </label>
         </div>
 
@@ -26,9 +37,9 @@
                  <input type="text" placeholder="Credit card number*"/>
             </div>
             <div class="control">
-                 <input type="text" onfocus="(this.type='date')"
+                 <input class="date" type="text" onfocus="(this.type='date')"
                  onblur="(this.type='text')" placeholder="Expiry Date*">
-                 <input type="text" placeholder="CVC / CVV*">
+                 <input class="cvc" type="text" placeholder="CVC / CVV*">
             </div>
             <div class="control">
                  <input type="text" placeholder="Name of Cardholder*">

@@ -21,7 +21,7 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
     protected $attributeMapper;
 
     /**
-     * @var AttributeMerger
+     * @var \Magento\Checkout\Block\Checkout\AttributeMerger
      */
     protected $merger;
 
@@ -38,12 +38,12 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
     /**
      * @param \Magento\Customer\Model\AttributeMetadataDataProvider $attributeMetadataDataProvider
      * @param \Magento\Ui\Component\Form\AttributeMapper $attributeMapper
-     * @param AttributeMerger $merger
+     * @param \Magento\Checkout\Block\Checkout\AttributeMerger $merger
      */
     public function __construct(
         \Magento\Customer\Model\AttributeMetadataDataProvider $attributeMetadataDataProvider,
         \Magento\Ui\Component\Form\AttributeMapper $attributeMapper,
-        AttributeMerger $merger
+        \Magento\Checkout\Block\Checkout\AttributeMerger $merger
     ) {
         $this->attributeMetadataDataProvider = $attributeMetadataDataProvider;
         $this->attributeMapper = $attributeMapper;
@@ -160,6 +160,47 @@ class LayoutProcessor implements \Magento\Checkout\Block\Checkout\LayoutProcesso
                 $fields
             );
         }
+
+        //rearrange elements.
+
+        //Shipping Address
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['firstname']['sortOrder']=10;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['lastname']['sortOrder']=20;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['customer-email']['sortOrder']=30;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['street']['sortOrder']=40;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['postcode']['sortOrder'] = 60;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['city']['sortOrder'] = 70;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['country_id']['sortOrder']=80;
+
+        $jsLayout['components']['checkout']['children']['shipping-step']
+        ['children']['shippingAddress']['children']['shipping-address-fieldset']
+        ['children']['telephone']['sortOrder']=90;
+
+        $writer = new \Zend_Log_Writer_Stream(BP . '/var/log/harsh.log');
+        $logger = new \Zend_Log();
+        $logger->addWriter($writer);
+        $logger->info(print_r($jsLayout['components']['checkout']['children']['shipping-step']['children']['shippingAddress']['children']['shipping-address-fieldset'], true));
+
         return $jsLayout;
     }
 

@@ -38,6 +38,54 @@
 
         <!-- Inline address form -->
         <render if="isFormInline" args="shippingFormTemplate"></render>
+
+        <div class="belowShippingFormWrapper">
+            <div class="field create-account">
+                <div class="input-label-container">
+                    <input type="checkbox" name="create-account-checkbox" id="create-account-checkbox">
+                    <label for="create-account-checkbox">Create a customer account now and benefit from many advantages.</label>
+                </div>
+                <p>
+                    <img data-bind="attr: { src: require.toUrl('images/checkout/info.svg') }"  alt="info">
+                    <span>The password will be sent to you by email</span>
+                </p>
+            </div>
+
+            <div class="field shipping-different">
+                <input type="checkbox" name="shipping-different-checkbox" id="shipping-different-checkbox">
+                <label for="shipping-different-checkbox">Shipping Address is Different</label>
+            </div>
+
+            <div class="field second-firstname">
+                <input type="text" placeholder="First name*" name="second-firstname"/>
+            </div>
+
+            <div class="field second-lastname">
+                <input type="text" placeholder="Last name*" name="second-lastname"/>
+            </div>
+
+            <div class="control">
+                <div class="field second-street">
+                    <input type="text" placeholder="Street*" name="second-street"/>
+                </div>
+                <div class="field second-houses">
+                    <input type="text" placeholder="Houses*" name="second-houses"/>
+                </div>
+            </div>
+
+            <div class="control">
+                <div class="field second-post">
+                    <input type="text" placeholder="Post Code*" name="second-post"/>
+                </div>
+                <div class="field second-location">
+                    <input type="text" placeholder="Location*" name="second-location"/>
+                </div>
+            </div>
+
+            <div class="field second-country">
+                <select name="second-country">
+            </div>
+        </div>
     </div>
 </li>
 
@@ -88,20 +136,3 @@
         </div>
     </div>
 </li>
-
-<!-- <li class="payment-method-form-wrapper">
-    <form submit="#">
-        <div class="control">
-            <label for="paypal">Paypal</label>
-            <input type="radio" name="payment" id="paypal"/>
-        </div>
-        <div class="control">
-            <label for="paypalplus">Paypal Plus</label>
-            <input type="radio" name="payment" id="paypalplus"/>
-        </div>
-        <div class="control">
-            <label for="investmentbank">Investment Bank</label>
-            <input type="radio" name="payment" id="investmentbank"/>
-        </div>
-    </form>
-</li> -->
