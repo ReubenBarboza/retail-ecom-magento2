@@ -42,8 +42,10 @@
         <div class="belowShippingFormWrapper">
             <div class="field create-account">
                 <div class="input-label-container">
-                    <input type="checkbox" name="create-account-checkbox" id="create-account-checkbox">
-                    <label for="create-account-checkbox">Create a customer account now and benefit from many advantages.</label>
+                    <label for="create-account-checkbox">
+                        <input type="checkbox" name="create-account-checkbox" id="create-account-checkbox">
+                        <span>Create a customer account now and benefit from many advantages.</span>
+                    </label>
                 </div>
                 <p>
                     <img data-bind="attr: { src: require.toUrl('images/checkout/info.svg') }"  alt="info">
@@ -52,8 +54,11 @@
             </div>
 
             <div class="field shipping-different">
-                <input type="checkbox" name="shipping-different-checkbox" id="shipping-different-checkbox">
-                <label for="shipping-different-checkbox">Shipping Address is Different</label>
+    
+                <label for="shipping-different-checkbox">
+                    <input type="checkbox" name="shipping-different-checkbox" id="shipping-different-checkbox">
+                    Shipping Address is Different
+                </label>
             </div>
 
             <div class="field second-firstname">
@@ -84,6 +89,11 @@
 
             <div class="field second-country">
                 <select name="second-country">
+                    <option>Select a Country</option>
+                    <option value="test1">test1</option>
+                    <option value="test2">test2</option>
+                </select>
+                <span class="chevron-down"></span>
             </div>
         </div>
     </div>

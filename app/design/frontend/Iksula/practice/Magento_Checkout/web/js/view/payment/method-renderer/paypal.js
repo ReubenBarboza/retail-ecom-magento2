@@ -9,7 +9,7 @@ define(
             defaults: {
                 template: 'Magento_Checkout/payment/paypal'
             },
-            currentChecked:ko.observable(false),
+            currentChecked:ko.observable("investmentbank"),
             getCode:function(){
                 return 'paypal'
             },

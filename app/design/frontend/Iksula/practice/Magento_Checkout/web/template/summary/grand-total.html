@@ -1,0 +1,39 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div class="actions-toolbar-trigger" id="place-order-trigger-wrapper">
+    <button type="button" class="btn btn--place-order" id="place-order-trigger" value="Place Order" >
+        <span>Checkout</span>
+    </button>
+    <div class="terms-conditions-wrapper">
+        
+        <label for="tandc">
+            <input type="checkbox" id="tandc" name="tandc"/>
+            <span>T&C is simply dummy text of the printing and typesetting industry</span>
+        </label>
+    </div>
+</div>
+
+<!-- ko if: isDisplayed() -->
+<div class="grand totals">
+    <div class="total-container">
+        <span class="mark" scope="row">
+            <strong>Total</strong>
+        </span>
+        <span class="amount" data-bind="attr: {'data-th': $t(title)}">
+            <strong><span class="price" data-bind="text: getValue()"></span></strong>
+            <!-- ko foreach: elems() -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            <!-- /ko -->
+        </span>
+    </div>
+    <div class="vat-container">
+        <span>(VAT)</span>
+        <span>7,195.00</span>
+    </div>
+</div>
+<!-- /ko -->
